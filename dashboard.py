@@ -471,10 +471,11 @@ def wind_speed_df(df, option):
 def winddirection_barh_graph(df):
     fig, ax = plt.subplots(figsize=(16, 8))
     p = ax.barh(df['wind_direction'], df['percent'], align = 'center')
-    p.bar_label(p, fmt= '%.2f', fontsize = 18)
-    p.set_xticklabels([])
-    p.set_ylabel(None)
-    p.set_xlabel("Percentage (%)", fontsize = 20)
+    ax.tick_params(axis='y', labelsize=20)
+    ax.bar_label(p, fmt= '%.2f', fontsize = 18)
+    ax.set_xticklabels([])
+    ax.set_ylabel(None)
+    ax.set_xlabel("Percentage (%)", fontsize = 20)
     st.pyplot(fig)
 def wind_speed_graph(df):
     fig, ax = plt.subplots(figsize=(16, 8))
