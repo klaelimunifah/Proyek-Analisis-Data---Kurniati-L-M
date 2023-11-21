@@ -576,13 +576,7 @@ if (option == "1 Day") :
         st.header("Wind Parameters in Aotizhongxin")
         with st.container():
             st.subheader("Wind Direction")
-            col1, col2 = st.columns([1,4])
-            with col1:
-                persen = wind_direction['percent'].max()
-                st.metric(str(persen) + "%", value = str(wind_direction['wind_direction'][0]))
-            with col2:
-                with st.expander("Percentage Graph"):
-                    winddirection_barh_graph(wind_direction.head(5))
+            winddirection_barh_graph(wind_direction.head(5))
         with st.container():
             st.subheader("Wind Direction")
             col1, col2 = st.columns([1,4])
@@ -656,13 +650,7 @@ elif (option == "Daily"):
         st.header("Wind Parameters in Aotizhongxin")
         with st.container():
             st.subheader("Wind Direction")
-            col1, col2 = st.columns([1,4])
-            with col1:
-                persen = wind_direction['percent'].max()
-                st.metric(str(persen) + "%", value = str(wind_direction['wind_direction'][0]))
-            with col2:
-                with st.expander("Percentage Graph"):
-                    winddirection_barh_graph(wind_direction.head(5))
+            winddirection_barh_graph(wind_direction.head(5))
         with st.container():
             st.subheader("Wind Direction")
             col1, col2 = st.columns([1,4])
@@ -736,13 +724,7 @@ elif (option == "Monthly"):
         st.header("Wind Parameters in Aotizhongxin")
         with st.container():
             st.subheader("Wind Direction")
-            col1, col2 = st.columns([1,4])
-            with col1:
-                persen = wind_direction['percent'].max()
-                st.metric(str(persen) + "%", value = str(wind_direction['wind_direction'][0]))
-            with col2:
-                with st.expander("Percentage Graph"):
-                    winddirection_barh_graph(wind_direction.head(5))
+            winddirection_barh_graph(wind_direction.head(5))
         with st.container():
             st.subheader("Wind Direction")
             col1, col2 = st.columns([1,4])
@@ -817,13 +799,7 @@ else:
         st.header("Wind Parameters in Aotizhongxin")
         with st.container():
             st.subheader("Wind Direction")
-            col1, col2 = st.columns([1,4])
-            with col1:
-                persen = wind_direction['percent'].max()
-                st.metric(str(persen) + "%", value = str(wind_direction['wind_direction'][0]))
-            with col2:
-                with st.expander("Percentage Graph"):
-                    winddirection_barh_graph(wind_direction.head(5))
+            winddirection_barh_graph(wind_direction.head(5))
         with st.container():
             st.subheader("Wind Direction")
             col1, col2 = st.columns([1,4])
