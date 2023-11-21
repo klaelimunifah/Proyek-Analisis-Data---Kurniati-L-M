@@ -470,8 +470,7 @@ def wind_speed_df(df, option):
     return wind_speed_df
 def winddirection_barh_graph(df):
     fig, ax = plt.subplots(figsize=(16, 8))
-    p = ax.barh(df['index'], df['percent'], align = 'center')
-    ax.bar_label(p, fmt= '%.2f', fontsize = 18)
+    sns.barplot(data= df, x= df['percent'], y= df['wind_direction'], palette= 'plasma', ax= ax, orient= 'h')
     ax.set_yticks(df['index'], labels=df['wind_direction'])
     ax.set_xticklabels([])
     ax.set_ylabel(None)
@@ -578,7 +577,7 @@ if (option == "1 Day") :
             st.subheader("Wind Direction")
             winddirection_barh_graph(wind_direction.head(5))
         with st.container():
-            st.subheader("Wind Direction")
+            st.subheader("Wind Speed")
             col1, col2 = st.columns([1,4])
             with col1:
                 mean = round(wind_speed['wind_speed'].mean(), 2)
@@ -652,7 +651,7 @@ elif (option == "Daily"):
             st.subheader("Wind Direction")
             winddirection_barh_graph(wind_direction.head(5))
         with st.container():
-            st.subheader("Wind Direction")
+            st.subheader("Wind Speed")
             col1, col2 = st.columns([1,4])
             with col1:
                 mean = round(wind_speed['wind_speed'].mean(), 2)
@@ -726,7 +725,7 @@ elif (option == "Monthly"):
             st.subheader("Wind Direction")
             winddirection_barh_graph(wind_direction.head(5))
         with st.container():
-            st.subheader("Wind Direction")
+            st.subheader("Wind Speed")
             col1, col2 = st.columns([1,4])
             with col1:
                 mean = round(wind_speed['wind_speed'].mean(), 2)
@@ -801,7 +800,7 @@ else:
             st.subheader("Wind Direction")
             winddirection_barh_graph(wind_direction.head(5))
         with st.container():
-            st.subheader("Wind Direction")
+            st.subheader("Wind Speed")
             col1, col2 = st.columns([1,4])
             with col1:
                 mean = round(wind_speed['wind_speed'].mean(), 2)
