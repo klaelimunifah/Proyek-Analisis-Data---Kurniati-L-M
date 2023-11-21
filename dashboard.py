@@ -469,9 +469,11 @@ def wind_speed_df(df, option):
         wind_speed_df['time'] = wind_speed_df["year"].astype(str)
     return wind_speed_df
 def winddirection_barh_graph(df):
+    a = len(df['wind_direction'])
     fig, ax = plt.subplots(figsize=(16, 8))
-    p = ax.barh(df['wind_direction'], df['percent'], align = 'center')
+    p = ax.barh(a, df['percent'], align = 'center')
     ax.bar_label(p, fmt= '%.2f', fontsize = 18)
+    ax.set_yticks(a, labels=df['wind_direction'])
     ax.set_xticklabels([])
     ax.set_ylabel(None)
     ax.set_xlabel("Percentage (%)", fontsize = 20)
