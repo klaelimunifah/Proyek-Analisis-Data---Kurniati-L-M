@@ -473,7 +473,6 @@ def winddirection_barh_graph(df):
     sns.barplot(data= df, x= df['percent'], y= df['wind_direction'], palette= 'plasma', ax= ax, orient= 'h')
     ax.tick_params(axis='y', labelsize=20)
     ax.tick_params(axis='x', labelsize=20, labelrotation = 45)
-    ax.set_xticklabels([])
     ax.set_ylabel(None)
     ax.set_xlabel("Percentage (%)", fontsize = 20)
     st.pyplot(fig)
