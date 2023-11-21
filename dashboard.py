@@ -659,7 +659,7 @@ elif (option == "Daily"):
             col1, col2 = st.columns([1,4])
             with col1:
                 persen = wind_direction['percent'].max()
-                st.metric(str(persen) + "%", value = wind_direction['wind_direction'].head(0))
+                st.metric(str(persen) + "%", value = str(wind_direction['wind_direction'].head(0))
             with col2:
                 with st.expander("Percentage Graph"):
                     winddirection_barh_graph(wind_direction.head(5))
@@ -739,7 +739,7 @@ elif (option == "Monthly"):
             col1, col2 = st.columns([1,4])
             with col1:
                 persen = wind_direction['percent'].max()
-                st.metric(str(persen) + "%", wind_direction['wind_direction'][0])
+                st.metric(str(persen) + "%", value = str(wind_direction['wind_direction'].head(0))
             with col2:
                 with st.expander("Percentage Graph"):
                     winddirection_barh_graph(wind_direction.head(5))
@@ -820,7 +820,7 @@ else:
             col1, col2 = st.columns([1,4])
             with col1:
                 persen = wind_direction['percent'].max()
-                st.metric(str(persen) + "%", wind_direction['wind_direction'][0])
+                st.metric(str(persen) + "%", value = str(wind_direction['wind_direction'].head(0))
             with col2:
                 with st.expander("Percentage Graph"):
                     winddirection_barh_graph(wind_direction.head(5))
