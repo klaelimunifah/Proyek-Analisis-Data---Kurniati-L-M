@@ -5,3 +5,5 @@ conda activate main-ds
 pip install pandas matplotlib seaborn jupyter streamlit 
 ## Run steamlit app
 streamlit run dashboard.py
+
+Link hasil deploy streamlit: https://kurniati-air-quality-aotizhongxin.streamlit.app/
