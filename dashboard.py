@@ -578,7 +578,7 @@ if (option == "1 Day") :
             st.subheader("Wind Direction")
             col1, col2 = st.columns([1,4])
             with col1:
-                persen = wind_direction['percent'][0]
+                persen = wind_direction['percent'].max()
                 st.metric(str(persen) + "%", wind_direction['wind_direction'][0])
             with col2:
                 with st.expander("Percentage Graph"):
@@ -658,7 +658,7 @@ elif (option == "Daily"):
             st.subheader("Wind Direction")
             col1, col2 = st.columns([1,4])
             with col1:
-                persen = wind_direction['percent'][0]
+                persen = wind_direction['percent'].max()
                 st.metric(str(persen) + "%", wind_direction['wind_direction'][0])
             with col2:
                 with st.expander("Percentage Graph"):
@@ -738,7 +738,7 @@ elif (option == "Monthly"):
             st.subheader("Wind Direction")
             col1, col2 = st.columns([1,4])
             with col1:
-                persen = wind_direction['percent'][0]
+                persen = wind_direction['percent'].max()
                 st.metric(str(persen) + "%", wind_direction['wind_direction'][0])
             with col2:
                 with st.expander("Percentage Graph"):
@@ -819,7 +819,7 @@ else:
             st.subheader("Wind Direction")
             col1, col2 = st.columns([1,4])
             with col1:
-                persen = wind_direction['percent'][0]
+                persen = wind_direction['percent'].max()
                 st.metric(str(persen) + "%", wind_direction['wind_direction'][0])
             with col2:
                 with st.expander("Percentage Graph"):
@@ -833,4 +833,3 @@ else:
             with col2:
                 with st.expander("Wind Speed Graph"):
                     wind_speed_graph(wind_speed)
-
