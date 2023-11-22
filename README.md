@@ -10,4 +10,4 @@ Link github repository: https://github.com/klaelimunifah/Proyek-Analisis-Data---
 
 Link hasil deploy streamlit: https://kurniati-air-quality-aotizhongxin.streamlit.app
 
-Link google drive: https://drive.google.com/drive/folders/13S81x9LocSmkpdIt1sY8JSLOeOHHyPkG?usp=drive_link
+Link google drive: https://drive.google.com/drive/folders/13S81x9LocSmkpdIt1sY8JSLOeOHHyPkG?usp=sharing
