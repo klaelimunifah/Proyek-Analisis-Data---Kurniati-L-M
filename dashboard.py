@@ -412,17 +412,17 @@ def timespan_particle_df(df):
 def timespan_bar_graph(df):
     warna = ['#F59245', '#F5E926','#CE5270','#9316A0']
     fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(16, 8))
-    p = sns.barplot(data= df, x= df['time_span'], y= df['PM2.5'], palette= warna, ax= ax[0], orient= 'v')
-    p.tick_params(axis='y', labelsize=20)
-    p.tick_params(axis='x', labelsize=20)
-    p.set_xlabel(None)
-    p.set_ylabel("PM2.5", fontsize = 20)
+    ax[0].bar(x= df['time_span'], height = df['PM2.5'], color = warna)
+    ax[0].tick_params(axis='y', labelsize=20)
+    ax[0].tick_params(axis='x', labelsize=20)
+    ax[0].set_xlabel(None)
+    ax[0].set_ylabel("PM2.5", fontsize = 20)
 
-    p= sns.barplot(data= df, x = df['time_span'], y= df['PM10'], palette= warna, ax=ax[1], orient = 'v')
-    p.tick_params(axis='y', labelsize=20)
-    p.tick_params(axis='x', labelsize=20)
-    p.set_xlabel(None)
-    p.set_ylabel("PM10", fontsize = 20)
+    ax[1].bar(x= df['time_span'], height = df['PM10'], color = warna)
+    ax[1].tick_params(axis='y', labelsize=20)
+    ax[1].tick_params(axis='x', labelsize=20)
+    ax[1].set_xlabel(None)
+    ax[1].set_ylabel("PM10", fontsize = 20)
 
     st.pyplot(fig)
 
@@ -470,7 +470,9 @@ def wind_speed_df(df, option):
     return wind_speed_df
 def winddirection_barh_graph(df):
     fig, ax = plt.subplots(figsize=(16, 8))
-    sns.barplot(data= df, x= df['percent'], y= df['wind_direction'], palette= 'plasma', ax= ax, orient= 'h')
+    warna_2 = ['#1F0752','#9316A0','#CE5270','#F5E926', '#F59245']
+    ax.barh(y= df['wind_direction'], width = df['percent'], color = warna_2)
+    ax.invert_yaxis()
     ax.tick_params(axis='y', labelsize=20)
     ax.tick_params(axis='x', labelsize=20, labelrotation = 45)
     ax.set_ylabel(None)
